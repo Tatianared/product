@@ -11,7 +11,8 @@ public class ProductRepository {
     }
 
     public Product[] findAll() {
-        return findAll();
+
+        return products;
     }
 
 
@@ -36,17 +37,6 @@ public class ProductRepository {
             }
         }
         products = tmp;
-    }
-
-
-    public int findAll(int[] products) {
-        int[] allProduct = new int[products.length];
-        int i;
-        for (i = 0; i < products.length; i++) {
-
-        }
-        return allProduct[i];
-
     }
 
 

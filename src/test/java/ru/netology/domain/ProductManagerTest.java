@@ -2,7 +2,7 @@ package ru.netology.domain;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 import ru.netology.repository.ProductRepository;
 
 public class ProductManagerTest {
@@ -27,18 +27,11 @@ public class ProductManagerTest {
 
     @Test
     public void shouldFindBook() {
-        Product[] expected = {book2, book3};
-        Product[] actual = manager.searchBy("bbb");
+        Product[] expected = {book1};
+        Product[] actual = manager.searchBy("first");
         Assertions.assertArrayEquals(expected, actual);
 
     }
-    @Test
-    public void shouldFindPhone() {
-        Product[] expected = {phone1, phone2};
-        Product[] actual = manager.searchBy("ddd");
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
 
 
     @Test
@@ -46,6 +39,30 @@ public class ProductManagerTest {
         Product[] expected = {phone3};
         Product[] actual = manager.searchBy("sixth");
         Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindPhoneNameForth() {
+        Product[] expected = {phone1};
+        Product[] actual = manager.searchBy("forth");
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+
+    @Test
+    public void shouldFindBookSmartphone() {
+        Product[] expected = {};
+        Product[] actual = manager.searchBy("ten");
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    public void shouldFind() {
+        Product[] expected = {book1, phone2};
+        Product[] actual = manager.searchBy("fi");
+        Assertions.assertArrayEquals(expected, actual);
+
     }
 
 

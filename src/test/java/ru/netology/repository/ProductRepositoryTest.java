@@ -1,14 +1,14 @@
 package ru.netology.repository;
 
-import org.testng.annotations.Test;
-import org.testng.internal.junit.ArrayAsserts;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import ru.netology.domain.Product;
 
 public class ProductRepositoryTest {
     Product product1 = new Product(1, "first", 100);
     Product product2 = new Product(2, "second", 200);
     Product product3 = new Product(3, "third", 300);
-    private ArrayAsserts Assertions;
+
 
 
     @Test
